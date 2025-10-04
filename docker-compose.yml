@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  # Node.js Backend
+  api:
+    build: ./api
+    container_name: archangel-api
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-3000}:3000"
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+      - ./logs:/app/logs
+    command: npm start
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: archangel-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: archangel-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
+  redis_data:
