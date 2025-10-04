@@ -17,7 +17,9 @@ export function setupBotHandlers(bot) {
       var userId = msg.from.id;
       var userText = msg.text;
 
-      if (!userText) return;
+      if (!userText) {
+        return;
+      }
 
       logger.info(`Message from user ${userId}: ${userText}`);
 
@@ -87,6 +89,10 @@ export function setupBotHandlers(bot) {
           await handleShowSources(bot, chatId, userId, user);
           break;
 
+        case 'delete_profile':
+          await handleProfileDeletion(bot, chatId, userId, user);
+          break;
+
         case 'help':
           await sendTranslated(bot, chatId, 'help', user.language);
           break;
@@ -132,6 +138,7 @@ async function handleProfileCreation(bot, chatId, userId, userText, user) {
   await sendTranslated(bot, chatId, 'profile_updated', detectedLang);
 
   // Start initial safety check
+  await sendTranslated(bot, chatId, 'check_started', user.language);
   await performSafetyCheck(bot, userId, detectedLang);
 
   logger.info(`Profile created for user ${userId} in ${detectedLang}`);
@@ -162,6 +169,27 @@ async function handleProfileUpdate(bot, chatId, userId, userText, user) {
   await sendTranslated(bot, chatId, 'profile_updated', user.language);
 
   logger.info(`Profile updated for user ${userId}`);
+}
+
+/**
+ * Handle profile reset
+ */
+async function handleProfileDeletion(bot, chatId, userId, user)  {
+  logger.info('deleting profile: ' + userId);
+
+  var profileKey = `profile:${userId}`,
+      alertsKey = `alerts:${userId}`,
+      sourcesKey = `sources:${userId}`;
+
+  try {
+    await redis.del([profileKey, alertsKey, sourcesKey]);
+    await bot.sendMessage(chatId, '✅ Your profile has been reset');
+    logger.info('profile deleted: ' + userId);
+    await sendTranslated(bot, chatId, 'welcome', user.language);
+  } catch (e) {
+    logger.error('Profile deletion failed', e);
+    throw e;
+  }
 }
 
 /**

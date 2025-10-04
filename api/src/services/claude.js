@@ -58,6 +58,7 @@ Possible intents:
 7. "show_sources" - wants to see their news sources
 8. "help" - needs help/instructions
 9. "unclear" - unclear what user wants
+10. "delete_profile" - wants to delete/reset their profile
 
 Return JSON:
 {
