@@ -235,6 +235,7 @@ I understand natural language. Just tell me what you need:
 🔍 Check now: "Check safety now" or "Any alerts?"
 📊 Show alerts: "What's happening?" or "Show my alerts"
 📚 Show sources: "What sources do you monitor?"
+❌ Delete profile: "Reset my profile" or "Delete my profile"
 
 Just write naturally - I'll understand! 🤖`,
 
@@ -249,6 +250,7 @@ Ich verstehe natürliche Sprache. Sag mir einfach, was du brauchst:
 🔍 Jetzt prüfen: "Sicherheit jetzt prüfen" oder "Gibt es Warnungen?"
 📊 Warnungen anzeigen: "Was passiert?" oder "Zeig meine Warnungen"
 📚 Quellen anzeigen: "Welche Quellen überwachst du?"
+❌ Profil löschen: "Setze mein Profil zurück" oder "Lösche mein Profil"
 
 Schreib einfach natürlich - ich verstehe dich! 🤖`,
 
@@ -263,6 +265,7 @@ Rozumiem naturalny język. Po prostu powiedz mi, czego potrzebujesz:
 🔍 Sprawdź teraz: "Sprawdź bezpieczeństwo" lub "Jakieś alerty?"
 📊 Pokaż alerty: "Co się dzieje?" lub "Pokaż moje alerty"
 📚 Pokaż źródła: "Jakie źródła monitorujesz?"
+❌ Usuń profil: "Zresetuj mój profil" lub "Usuń mój profil"
 
 Po prostu pisz naturalnie - zrozumiem! 🤖`,
 
@@ -277,6 +280,7 @@ Po prostu pisz naturalnie - zrozumiem! 🤖`,
 🔍 Проверить сейчас: "Проверь безопасность" или "Есть алерты?"
 📊 Показать алерты: "Что происходит?" или "Покажи мои алерты"
 📚 Показать источники: "Какие источники отслеживаешь?"
+❌ Удалить профиль: "Сбросить мой профиль" или "Удалить мой профиль"
 
 Просто пиши естественно - я пойму! 🤖`,
 
@@ -291,6 +295,7 @@ Po prostu pisz naturalnie - zrozumiem! 🤖`,
 🔍 Перевірити зараз: "Перевір безпеку" або "Є сповіщення?"
 📊 Показати сповіщення: "Що відбувається?" або "Покажи мої сповіщення"
 📚 Показати джерела: "Які джерела відстежуєш?"
+❌ Видалити профіль: "Скинути мій профіль" або "Видалити мій профіль"
 
 Просто пишіть природно - я зрозумію! 🤖`,
 
@@ -305,6 +310,7 @@ Je comprends le langage naturel. Dis-moi simplement ce dont tu as besoin :
 🔍 Vérifier maintenant : "Vérifie la sécurité" ou "Des alertes ?"
 📊 Afficher les alertes : "Que se passe-t-il ?" ou "Montre mes alertes"
 📚 Afficher les sources : "Quelles sources surveilles-tu ?"
+❌ Supprimer le profil : "Réinitialiser mon profil" ou "Supprimer mon profil"
 
 Écris naturellement - je comprendrai ! 🤖`,
 
@@ -319,6 +325,7 @@ Entiendo el lenguaje natural. Solo dime lo que necesitas:
 🔍 Verificar ahora: "Verifica la seguridad" o "¿Alguna alerta?"
 📊 Mostrar alertas: "¿Qué está pasando?" o "Muestra mis alertas"
 📚 Mostrar fuentes: "¿Qué fuentes monitorizas?"
+❌ Eliminar perfil: "Restablecer mi perfil" o "Eliminar mi perfil"
 
 ¡Escribe naturalmente - te entenderé! 🤖`,
 
@@ -333,6 +340,7 @@ Entiendo el lenguaje natural. Solo dime lo que necesitas:
 🔍 בדיקה עכשיו: "בדוק בטיחות עכשיו" או "יש התראות?"
 📊 הצגת התראות: "מה קורה?" או "הצג את ההתראות שלי"
 📚 הצגת מקורות: "אילו מקורות אתה עוקב?"
+❌ מחק פרופיל: "אתחל את הפרופיל שלי" או "מחק את הפרופיל שלי"
 
 פשוט כתוב באופן טבעי - אני אבין! 🤖`,
 
@@ -347,6 +355,7 @@ Entiendo el lenguaje natural. Solo dime lo que necesitas:
 🔍 今すぐチェック：「今すぐ安全確認」または「アラートある？」
 📊 アラート表示：「何が起きてる？」または「アラートを見せて」
 📚 ソース表示：「どのソースを監視してる？」
+❌ プロフィールを削除:「プロフィールをリセット」または「プロフィールを削除」
 
 自然に書いてください - 理解します！🤖`,
 
@@ -361,6 +370,7 @@ Entiendo el lenguaje natural. Solo dime lo que necesitas:
 🔍 立即检查："现在检查安全性"或"有警报吗？"
 📊 显示警报："发生了什么？"或"显示我的警报"
 📚 显示来源："你监控哪些来源？"
+❌ 删除个人资料: "重置我的个人资料" 或 "删除我的个人资料"
 
 自然地写 - 我会理解！🤖`,
 
@@ -375,6 +385,7 @@ Entiendo el lenguaje natural. Solo dime lo que necesitas:
 🔍 지금 확인: "지금 안전 확인" 또는 "알림 있어?"
 📊 알림 표시: "무슨 일이야?" 또는 "내 알림 보여줘"
 📚 소스 표시: "어떤 소스를 모니터링해?"
+❌ 프로필 삭제: "내 프로필 재설정" 또는 "내 프로필 삭제"
 
 자연스럽게 쓰세요 - 이해할게요! 🤖`,
 
@@ -389,6 +400,7 @@ Entiendo el lenguaje natural. Solo dime lo que necesitas:
 🔍 अभी जांचें: "अभी सुरक्षा जांचें" या "कोई अलर्ट?"
 📊 अलर्ट दिखाएं: "क्या हो रहा है?" या "मेरे अलर्ट दिखाएं"
 📚 स्रोत दिखाएं: "आप कौन से स्रोत मॉनिटर करते हैं?"
+❌ प्रोफ़ाइल हटाएं: "मेरी प्रोफ़ाइल रीसेट करें" या "मेरी प्रोफ़ाइल हटाएं"
 
 बस स्वाभाविक रूप से लिखें - मैं समझ जाऊंगा! 🤖`,
 
@@ -403,6 +415,7 @@ Entiendo el lenguaje natural. Solo dime lo que necesitas:
 🔍 التحقق الآن: "تحقق من الأمان الآن" أو "أي تنبيهات؟"
 📊 عرض التنبيهات: "ماذا يحدث؟" أو "أظهر تنبيهاتي"
 📚 عرض المصادر: "ما المصادر التي تراقبها؟"
+❌ حذف الملف الشخصي: "إعادة تعيين ملفي الشخصي" أو "حذف ملفي الشخصي"
 
 فقط اكتب بشكل طبيعي - سأفهم! 🤖`,
 
@@ -417,6 +430,7 @@ Entiendo el lenguaje natural. Solo dime lo que necesitas:
 🔍 এখনই চেক করুন: "এখনই নিরাপত্তা চেক করুন" বা "কোন সতর্কতা?"
 📊 সতর্কতা দেখান: "কী হচ্ছে?" বা "আমার সতর্কতা দেখান"
 📚 উৎস দেখান: "আপনি কোন উৎস মনিটর করেন?"
+❌ প্রোফাইল মুছে ফেলুন: "আমার প্রোফাইল পুনরায় সেট করুন" অথবা "আমার প্রোফাইল মুছে ফেলুন"
 
 শুধু স্বাভাবিকভাবে লিখুন - আমি বুঝব! 🤖`,
 
@@ -431,6 +445,7 @@ Eu entendo linguagem natural. Apenas me diga o que você precisa:
 🔍 Verificar agora: "Verifique a segurança agora" ou "Algum alerta?"
 📊 Mostrar alertas: "O que está acontecendo?" ou "Mostre meus alertas"
 📚 Mostrar fontes: "Quais fontes você monitora?"
+❌ Excluir perfil: "Redefinir meu perfil" ou "Excluir meu perfil"
 
 Apenas escreva naturalmente - eu vou entender! 🤖`,
 
@@ -445,6 +460,7 @@ Saya memahami bahasa alami. Cukup beri tahu saya apa yang Anda butuhkan:
 🔍 Periksa sekarang: "Periksa keamanan sekarang" atau "Ada peringatan?"
 📊 Tampilkan peringatan: "Apa yang terjadi?" atau "Tampilkan peringatan saya"
 📚 Tampilkan sumber: "Sumber apa yang Anda pantau?"
+❌ Hapus profil: "Reset profil saya" atau "Hapus profil saya"
 
 Tulis saja secara alami - saya akan mengerti! 🤖`,
 
@@ -459,6 +475,7 @@ Naelewa lugha ya asili. Niambie tu unachohitaji:
 🔍 Angalia sasa: "Angalia usalama sasa" au "Kuna tahadhari?"
 📊 Onyesha tahadhari: "Nini kinachotokea?" au "Onyesha tahadhari zangu"
 📚 Onyesha vyanzo: "Unafuatilia vyanzo gani?"
+❌ Futa wasifu: "Rejesha wasifu wangu" au "Futa wasifu wangu"
 
 Andika tu kwa kawaida - nitaelewa! 🤖`,
 
@@ -473,6 +490,7 @@ Doğal dili anlıyorum. Sadece neye ihtiyacın olduğunu söyle:
 🔍 Şimdi kontrol et: "Güvenliği şimdi kontrol et" veya "Uyarı var mı?"
 📊 Uyarıları göster: "Neler oluyor?" veya "Uyarılarımı göster"
 📚 Kaynakları göster: "Hangi kaynakları izliyorsun?"
+❌ Profili sil: "Profilimi sıfırla" veya "Profilimi sil"
 
 Sadece doğal yaz - anlayacağım! 🤖`,
 
@@ -487,6 +505,7 @@ Sadece doğal yaz - anlayacağım! 🤖`,
 🔍 ตรวจสอบตอนนี้: "ตรวจสอบความปลอดภัยตอนนี้" หรือ "มีการแจ้งเตือนไหม?"
 📊 แสดงการแจ้งเตือน: "เกิดอะไรขึ้น?" หรือ "แสดงการแจ้งเตือนของฉัน"
 📚 แสดงแหล่ง: "คุณติดตามแหล่งไหนบ้าง?"
+❌ ลบโปรไฟล์: "รีเซ็ตโปรไฟล์ของฉัน" หรือ "ลบโปรไฟล์ของฉัน"
 
 เขียนแบบธรรมชาติ - ฉันจะเข้าใจ! 🤖`
   }
