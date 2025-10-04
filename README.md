@@ -76,9 +76,9 @@ Using MacBook, iPhone, Node.js and React.
 Just write naturally - the AI understands:
 
 - **Update profile**: "I moved to Paris" or "I'm now a journalist"
-- **Change language**: "Switch to <YOUR-LANGUAGE>"
-- **Add news source**: "Track <NEWS-SOURCE>" or "Add <NEWS-SOURCE>"
-- **Remove source**: "Stop tracking <NEWS-SOURCE>" or "Remove <NEWS-SOURCE>"
+- **Change language**: "Switch to YOUR-LANGUAGE"
+- **Add news source**: "Track NEWS-SOURCE" or "Add NEWS-SOURCE"
+- **Remove source**: "Stop tracking NEWS-SOURCE" or "Remove NEWS-SOURCE"
 - **Check now**: "Check safety now" or "Any alerts?"
 - **Show alerts**: "What's happening?" or "Show my alerts"
 - **Show sources**: "What sources do you monitor?"
