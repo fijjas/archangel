@@ -1,0 +1,21 @@
+export var langCodes = [
+  'en', // English
+  'de', // German (Deutsch)
+  'pl', // Polish (Polski)
+  'ru', // Russian (Русский)
+  'uk', // Ukrainian (Українська)
+  'fr', // French (Français)
+  'es', // Spanish (Español)
+  'he', // Hebrew (עברית)
+  'ja', // Japanese (日本語)
+  'zh', // Chinese (中文)
+  'ko', // Korean (한국어)
+  'hi', // Hindi (हिन्दी)
+  'ar', // Arabic (العربية)
+  'bn', // Bengali (বাংলা)
+  'pt', // Portuguese (Português)
+  'id', // Indonesian (Bahasa Indonesia)
+  'sw', // Swahili (Kiswahili)
+  'tr', // Turkish (Türkçe)
+  'th' // Thai (ไทย)
+];

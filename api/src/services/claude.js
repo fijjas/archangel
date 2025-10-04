@@ -1,6 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import logger from '../utils/logger.js';
 import { extractJSON } from "../utils/response-parser.js";
+import { langCodes } from "../utils/lang-codes.js";
 
 var claude = new Anthropic({
   apiKey: process.env.CLAUDE_API_KEY
@@ -11,6 +12,7 @@ var claude = new Anthropic({
  */
 export async function detectLanguage(text) {
   try {
+    var supportedLanguages = langCodes;
     var response = await claude.messages.create({
       model: 'claude-sonnet-4-20250514',
       max_tokens: 100,
@@ -25,9 +27,9 @@ Return only the code, nothing else. Examples: en, pl, de, fr`
     });
 
     var langCode = response.content[0].text.trim().toLowerCase();
+    logger.info(`Detected language (raw): ${langCode}`);
 
     // Validate
-    var supportedLanguages = ['en', 'pl', 'de', 'fr', 'es'];
     return supportedLanguages.includes(langCode) ? langCode : 'en';
 
   } catch (error) {
