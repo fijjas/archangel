@@ -3,6 +3,7 @@ import Parser from 'rss-parser';
 import * as cheerio from 'cheerio';
 import claude from './claude.js';
 import logger from '../utils/logger.js';
+import { extractJSON } from '../utils/response-parser.js';
 
 var rssParser = new Parser();
 
@@ -41,7 +42,7 @@ Return JSON:
       messages: [{ role: 'user', content: prompt }]
     });
 
-    return JSON.parse(response.content[0].text);
+    return extractJSON(response.content[0].text);
 
   } catch (error) {
     logger.error('Source validation failed:', error);
@@ -57,7 +58,7 @@ Return JSON:
  */
 export async function fetchNewsFromSource(source) {
   try {
-    logger.info(`Fetching news from: ${source.name}`);
+    logger.info(`Fetching news from: ${source.name} (${source.url})`);
 
     // Try RSS first
     if (source.url.includes('rss') || source.url.includes('feed')) {
@@ -89,7 +90,8 @@ async function fetchRSS(url) {
     }));
 
   } catch (error) {
-    logger.error('RSS fetch failed:', error.message);
+    var errorMsg = error.message || error.code || 'Unknown error';
+    logger.error('RSS fetch failed:', errorMsg);
     return [];
   }
 }
@@ -135,7 +137,15 @@ async function fetchWebNews(url) {
     return articles;
 
   } catch (error) {
-    logger.error('Web scraping failed:', error.message);
+    // Better error logging
+    var errorMsg = error.message || error.code || 'Unknown error';
+    if (error.code === 'ENOTFOUND') {
+      errorMsg = `Domain not found: ${url}`;
+    } else if (error.code === 'ETIMEDOUT') {
+      errorMsg = `Timeout: ${url}`;
+    }
+
+    logger.error('Web scraping failed:', errorMsg);
     return [];
   }
 }

@@ -1,5 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import logger from '../utils/logger.js';
+import { extractJSON } from "../utils/response-parser.js";
 
 var claude = new Anthropic({
   apiKey: process.env.CLAUDE_API_KEY
@@ -71,8 +72,7 @@ Return JSON:
       messages: [{ role: 'user', content: prompt }]
     });
 
-    var result = JSON.parse(response.content[0].text);
-    return result;
+    return extractJSON(response.content[0].text);
 
   } catch (error) {
     logger.error('Intent analysis failed:', error);
@@ -120,8 +120,7 @@ Return JSON with dynamic structure:
       max_tokens: 4096,
       messages: [{ role: 'user', content: prompt }]
     });
-
-    var result = JSON.parse(response.content[0].text);
+    var result = extractJSON(response.content[0].text);
 
     // Merge with existing profile if present
     if (currentProfile) {
@@ -177,8 +176,7 @@ Return JSON:
       messages: [{ role: 'user', content: prompt }]
     });
 
-    var result = JSON.parse(response.content[0].text);
-    return result;
+    return extractJSON(response.content[0].text);
 
   } catch (error) {
     logger.error('News analysis failed:', error);
@@ -230,8 +228,7 @@ Provide 8-12 sources covering ALL user-specific risks.`;
       max_tokens: 4096,
       messages: [{ role: 'user', content: prompt }]
     });
-
-    var result = JSON.parse(response.content[0].text);
+    var result = extractJSON(response.content[0].text);
     return result.sources || [];
 
   } catch (error) {

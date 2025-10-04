@@ -63,7 +63,6 @@ I'm Alex, 28, living in Berlin.
 US citizen, software engineer at a startup.
 Have work visa until 2026.
 Using MacBook, iPhone, Node.js and React.
-Parents live in Ukraine.
 ```
 
 4. The bot will:
@@ -77,9 +76,9 @@ Parents live in Ukraine.
 Just write naturally - the AI understands:
 
 - **Update profile**: "I moved to Paris" or "I'm now a journalist"
-- **Change language**: "Switch to YOUR-LANGUAGE"
-- **Add news source**: "Track XXX" or "Add XXX"
-- **Remove source**: "Stop tracking XXX" or "Remove XXX"
+- **Change language**: "Switch to <YOUR-LANGUAGE>"
+- **Add news source**: "Track <NEWS-SOURCE>" or "Add <NEWS-SOURCE>"
+- **Remove source**: "Stop tracking <NEWS-SOURCE>" or "Remove <NEWS-SOURCE>"
 - **Check now**: "Check safety now" or "Any alerts?"
 - **Show alerts**: "What's happening?" or "Show my alerts"
 - **Show sources**: "What sources do you monitor?"
@@ -159,12 +158,7 @@ MIT License - use it to help people stay safe!
 
 Archangel is a monitoring tool. Always verify critical information through official channels. The AI analysis is not a substitute for professional legal or security advice.
 
-## 🙏 Acknowledgments
+**"Archangel"** is used as a generic descriptive term for this open-source safety monitoring project. The name refers to the concept of protection and guardianship, not any specific commercial product or service.
 
-- Anthropic Claude for AI capabilities
-- Independent journalism for truth in authoritarian regimes
-- Everyone building tools for human safety
+If the project name "Archangel" conflicts with any registered trademarks, please open an issue and we will rename it immediately.
 
----
-
-**Stay safe! 🛡️**
