@@ -18,6 +18,10 @@ services:
       - /app/node_modules
       - ./logs:/app/logs
     command: npm start
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '1m'
 
   # PostgreSQL Database
   postgres:
@@ -33,6 +37,10 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '1m'
 
   # Redis Cache
   redis:
@@ -44,6 +52,10 @@ services:
       - redis_data:/data
     ports:
       - "6379:6379"
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '1m'
 
 volumes:
   postgres_data:
