@@ -11,7 +11,6 @@ AI-powered personal safety monitoring system that keeps you informed about threa
 - **Multi-language Support** - Automatically detects and responds in your language
 - **Dynamic Profiling** - AI extracts safety-relevant information from your description
 - **News Monitoring** - Tracks trusted independent sources
-- **Cyber Security** - Monitor vulnerabilities in your software stack
 - **No Commands** - AI understands intent from natural conversation
 
 ## 🚀 Quick Start
@@ -62,7 +61,6 @@ docker-compose logs -f api
 I'm Alex, 28, living in Berlin.
 US citizen, software engineer at a startup.
 Have work visa until 2026.
-Using MacBook, iPhone, Node.js and React.
 ```
 
 4. The bot will:
