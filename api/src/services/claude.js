@@ -102,7 +102,6 @@ Extract everything relevant. Examples of what to look for:
 - Health conditions, disabilities
 - LGBTQ, ethnic/religious minority status
 - Military status, draft concerns
-- Devices, software, services used (for cyber monitoring)
 - Languages spoken
 - Travel plans
 - Financial situation
@@ -124,6 +123,8 @@ Return JSON with dynamic structure:
       messages: [{ role: 'user', content: prompt }]
     });
     var result = extractJSON(response.content[0].text);
+
+    // logger.info('extracted profile: ', result.extracted);
 
     // Merge with existing profile if present
     if (currentProfile) {
@@ -202,13 +203,17 @@ CRITICAL: Analyze press freedom in involved countries. If authoritarian:
 - DISTRUST state media (propaganda)
 - Sources labeled "undesirable" or "foreign agent" are MORE credible
 
-Required source categories:
-1. LEGAL/IMMIGRATION: Immigration law changes, visa policy, deportation
-2. MOBILIZATION: Military draft, conscription, border restrictions
-3. PERSECUTION: Targeting of specific groups
-4. SECURITY: Military, terrorism, disasters
-5. ECONOMIC: Banking, sanctions, currency
-6. INDEPENDENT MEDIA: Opposition/exiled sources from authoritarian countries
+Required source categories (cover ALL relevant to user):
+1. MILITARY/WARFARE: Military operations, armed conflicts, invasions, escalations, ceasefires
+2. MOBILIZATION: Military draft, conscription, border closures, martial law
+3. LEGAL/IMMIGRATION: Law changes, visa policy, deportation, migration restrictions
+4. PERSECUTION: Targeting of ethnic/religious/political groups, human rights violations
+5. NATURAL DISASTERS: Earthquakes, tsunamis, floods, hurricanes, volcanic eruptions, wildfires
+6. TERRORISM: Terrorist attacks, extremist activities, security threats
+7. ECONOMIC/SANCTIONS: Economic crises, sanctions, trade restrictions, currency collapse, banking failures
+8. POLITICS: Regime changes, coups, elections, political instability, protests
+9. INDEPENDENT MEDIA: Opposition/exiled sources from authoritarian countries
+10. GLOBAL SECURITY: WMD threats, nuclear incidents, biological threats, major accidents
 
 Return JSON:
 {
@@ -216,15 +221,15 @@ Return JSON:
     {
       "name": "source name",
       "url": "URL",
-      "type": "independent/international/legal/economic",
+      "type": "independent/international/legal/economic/military/disaster/political",
       "relevance": "why critical for this user",
       "trust_score": 0-10,
-      "topics": ["immigration", "mobilization", etc.]
+      "topics": ["military", "mobilization", "earthquakes", etc.]
     }
   ]
 }
 
-Provide 8-12 sources covering ALL user-specific risks.`;
+Provide 12-18 sources covering ALL user-specific risks.`;
 
     var response = await claude.messages.create({
       model: 'claude-sonnet-4-20250514',
