@@ -14,7 +14,7 @@ export async function detectLanguage(text) {
   try {
     var supportedLanguages = langCodes;
     var response = await claude.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-3-5-haiku-20241022',
       max_tokens: 100,
       messages: [{
         role: 'user',
@@ -53,7 +53,7 @@ Possible intents:
 2. "change_language" - wants to switch language (extract target language)
 3. "add_news_source" - wants to add new news source (extract name/url)
 4. "remove_news_source" - wants to remove source (extract name)
-5. "check_now" - wants immediate safety check
+5. "check_now" - wants immediate alerts refresh/safety check
 6. "show_alerts" - wants to see current alerts
 7. "show_sources" - wants to see their news sources
 8. "help" - needs help/instructions
@@ -70,7 +70,7 @@ Return JSON:
 }`;
 
     var response = await claude.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-3-5-haiku-20241022',
       max_tokens: 1024,
       messages: [{ role: 'user', content: prompt }]
     });
@@ -193,7 +193,10 @@ Return JSON:
  */
 export async function discoverNewsSources(userProfile) {
   try {
-    var prompt = `You are a news source verification expert. Analyze user profile and provide trusted news sources.
+    var prompt = `You are a news source verification expert.
+Analyze user profile and provide trusted news sources.
+Do not return any non-scrapable sources like Telegram, WhatsApp, Discord, etc.
+Do not return RSS feed if you are not sure the link exists.
 
 USER PROFILE:
 ${JSON.stringify(userProfile, null, 2)}
@@ -229,7 +232,7 @@ Return JSON:
   ]
 }
 
-Provide 12-18 sources covering ALL user-specific risks.`;
+Provide 8-12 sources covering ALL user-specific risks.`;
 
     var response = await claude.messages.create({
       model: 'claude-sonnet-4-20250514',
